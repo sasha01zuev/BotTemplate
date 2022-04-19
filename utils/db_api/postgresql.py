@@ -14,7 +14,7 @@ class Database:
             user=config.PGUSER,
             password=config.PGPASSWORD,
             host=config.IP,
-            database="database_name"
+            database=config.DB_NAME
         )
         return cls(pool)
 

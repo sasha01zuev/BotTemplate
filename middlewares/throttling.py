@@ -36,7 +36,7 @@ class ThrottlingMiddleware(BaseMiddleware):
     async def message_throttled(self, message: types.Message, throttled: Throttled):
         delta = throttled.rate - throttled.delta
         if throttled.exceeded_count == 2:
-            await message.reply('Слишком Часто! Давай не так быстро')
+            await message.reply('🛑 So often!')
         elif throttled.exceeded_count == 3:
-            await message.reply("Всё. Больше не отвечу, пока не пройдет 5 сек")
+            await message.reply("Muted for {delta}".format(delta=delta))
         await asyncio.sleep(delta)

@@ -9,5 +9,6 @@ MAIN_ADMIN = env("MAIN_ADMIN")
 
 PGUSER = env("PGUSER")
 PGPASSWORD = env("PGPASSWORD")
+DB_NAME = env("DB_NAME")
 
 IP = env("IP")
